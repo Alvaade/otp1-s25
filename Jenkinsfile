@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'clean install'
+                bat 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
-                bat 'test'
+                bat 'mvn test'
             }
         }
         stage('Code Coverage') {
             steps {
-                bat 'jacoco:report'
+                bat 'mvn jacoco:report'
             }
         }
         stage('Publish Test Results') {
