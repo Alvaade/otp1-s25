@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Alvaade/otp1-s25.git'
+                git branch: 'main', url: 'https://github.com/Alvaade/otp1-s25.git'
             }
         }
         stage('Build') {
